@@ -4,7 +4,7 @@ var PORT = 8080;
   
 app.use(express.json());
     
-app.post('/', function (req, res) {
+app.post('/coins', function (req, res) {
     if(req.body.rollno=="200619")res.end('{"coins":infinite}');
     else res.end('{"coins":'+parseInt(req.body.rollno)+'}');
 })
